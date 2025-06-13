@@ -1,0 +1,70 @@
+.services-wrapper {
+  padding: 30px;
+  
+}
+
+.services-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #007d65;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.service-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.service-left {
+  flex: 1;
+  padding: 30px;
+  /* background-color: rgba(255, 255, 255, 0.07); */
+  border-radius: 20px;
+  color: #fff;
+}
+
+.service-left h2 {
+  font-size: 2.5rem;
+  color: #00a57e;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.service-left p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #f5f5f5;
+}
+
+.service-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image-box {
+  width: 350px;
+  height: 300px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-section.reverse {
+  flex-direction: row-reverse;
+}

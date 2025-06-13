@@ -1,0 +1,76 @@
+/* .video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Optional overlay content */
+/* .video-overlay-content {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  text-align: center;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.video-overlay-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.video-overlay-content p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+} */ */
+/* Make sure the root container fills the whole viewport */
+.video-container {
+  position: relative;
+  width: 100vw;       /* Full viewport width */
+  height: 100vh;      /* Full viewport height */
+  overflow: hidden;
+}
+
+/* The video fills entire container */
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;        /* full width of container */
+  height: 100%;       /* full height of container */
+  object-fit: cover;  /* cover without distortion */
+  z-index: -1;        /* behind other content */
+}
+
+/* Overlay text on video */
+.video-overlay-content {
+  position: relative; /* to be above video */
+  color: white;
+  text-align: center;
+  top: 50%;           /* center vertically */
+  left: 50%;          /* center horizontally */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding: 0 20px;
+}
+
+/* Navbar styles: make sure it stays on top */
+nav {
+  position: fixed;   /* or sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;       /* above video and overlay */
+}
