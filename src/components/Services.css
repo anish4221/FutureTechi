@@ -68,3 +68,78 @@
 .service-section.reverse {
   flex-direction: row-reverse;
 }
+/* Tablets and below (up to 992px) */
+@media (max-width: 992px) {
+  .service-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .service-left {
+    padding: 20px;
+  }
+
+  .service-left h2 {
+    font-size: 2rem;
+  }
+
+  .service-left p {
+    font-size: 1.1rem;
+  }
+
+  .service-image-box {
+    width: 300px;
+    height: 250px;
+  }
+
+  .service-section.reverse {
+    flex-direction: column; /* Disable reverse layout on smaller screens */
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .service-section {
+    padding: 30px 15px;
+    gap: 25px;
+  }
+
+  .service-left h2 {
+    font-size: 1.7rem;
+  }
+
+  .service-left p {
+    font-size: 1rem;
+  }
+
+  .service-image-box {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+/* Small mobile (up to 480px) */
+@media (max-width: 480px) {
+  .services-heading {
+    font-size: 2rem;
+  }
+
+  .service-left {
+    padding: 10px;
+  }
+
+  .service-left h2 {
+    font-size: 2rem;
+  }
+
+  .service-left p {
+    font-size: 1.2rem;
+  }
+
+  .service-image-box {
+    width: 220px;
+    height: 200px;
+  }
+}

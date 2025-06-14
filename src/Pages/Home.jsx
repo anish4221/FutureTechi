@@ -1,14 +1,15 @@
 import React from 'react';
 import './Home.css'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar'
+
 
 import home from '../assets/customizeimg.png';
 
 const Home = () => {
   return (
     <>
-      {/* <Navbar /> */}
-      <div className='hero-section' id="home">
+      <Navbar />
+      <div className='hero-section' id="about">
         <div className="hero-left">
           <h1>Future Techi — Powering Your Digital Growth</h1>
           <p>

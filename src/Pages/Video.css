@@ -1,76 +1,108 @@
-/* .video-container {
-  position: relative;
+/* Reset margin/padding and set html/body to 100% height */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  box-sizing: border-box;
 }
 
+/* Full viewport container */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  max-height: 100vh;
+  overflow: hidden; /* Hide overflow */
+  min-height: 300px; /* Prevent too small height */
+}
+
+/* Make video fill the container perfectly */
 .video-bg {
   position: absolute;
   top: 0;
   left: 0;
+  
+  /* Use width and height 100% of container */
   width: 100%;
   height: 100%;
+  
+  /* Ensure video covers container without distortion */
   object-fit: cover;
   z-index: -1;
 }
 
-/* Optional overlay content */
-/* .video-overlay-content {
-  position: relative;
-  z-index: 1;
-  color: #ffffff;
-  text-align: center;
-  top: 40%;
-  transform: translateY(-50%);
-}
-
-.video-overlay-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
-}
-
-.video-overlay-content p {
-  font-size: 1.5rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-} */ */
-/* Make sure the root container fills the whole viewport */
-.video-container {
-  position: relative;
-  width: 100vw;       /* Full viewport width */
-  height: 100vh;      /* Full viewport height */
-  overflow: hidden;
-}
-
-/* The video fills entire container */
-.video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;        /* full width of container */
-  height: 100%;       /* full height of container */
-  object-fit: cover;  /* cover without distortion */
-  z-index: -1;        /* behind other content */
-}
-
-/* Overlay text on video */
+/* Overlay content centered */
 .video-overlay-content {
-  position: relative; /* to be above video */
-  color: white;
-  text-align: center;
-  top: 50%;           /* center vertically */
-  left: 50%;          /* center horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  text-align: center;
   padding: 0 20px;
+  user-select: none;
+  color: #00a57e; /* Your original color */
 }
 
-/* Navbar styles: make sure it stays on top */
-nav {
-  position: fixed;   /* or sticky */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;       /* above video and overlay */
+/* Heading style */
+.video-overlay-content h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
 }
+
+/* Subheading style */
+.video-overlay-content p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Tablet screens */
+@media (max-width: 992px) {
+  .video-overlay-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .video-overlay-content p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .video-container {
+    height: 70vh; /* Reduce height for mobiles */
+  }
+
+  .video-overlay-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .video-overlay-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .video-container {
+    height: 50vh; /* Further reduce height on small devices */
+  }
+
+  .video-overlay-content {
+    padding: 0 10px;
+  }
+
+  .video-overlay-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .video-overlay-content p {
+    font-size: 1rem;
+  }
+}
+
