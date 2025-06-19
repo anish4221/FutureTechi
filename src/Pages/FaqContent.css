@@ -1,0 +1,51 @@
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f0f8ff;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-weight: 600;
+  color: #222;
+}
+
+.toggle-icon {
+  font-weight: 700;
+  font-size: 20px;
+  user-select: none;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Optional: smooth animation for answer */
+.faq-answer {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px; /* large enough to show all content */
+  }
+}

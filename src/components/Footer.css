@@ -1,37 +1,105 @@
 .footer {
   background-color: #0b1d24;
-  padding-bottom: 40px;
-  padding-top: 40px;
-  
+  padding: 40px 20px 20px 20px;
   color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
 }
 
+.footer-content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Section */
 .footer-left-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Left alignment */
-  gap: 12px;
+  gap: 14px;
+  max-width: 50%;
 }
 
+/* Contact */
+.footer-contact p {
+  margin: 2px 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Links */
 .footer-link {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #ffffff;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  gap: 8px;
+  gap: 10px;
+  transition: color 0.3s ease;
 }
 
+.footer-link:hover {
+  color: #4fd1c5; /* teal hover */
+}
+
+/* Icon */
 .footer-icon {
   width: 24px;
   height: 24px;
 }
 
-.footer-contact p {
-  padding-left: 40px;
-  margin: 2px 0;
-  font-size: 1rem;
+/* Right Section */
+.footer-right {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: right;
+}
+
+/* FAQ and Career links */
+.faq-link {
+  font-weight: 500;
+ 
+  font-size: 1rem;
+}
+
+.footer-right p {
+  margin: 0;
+  color: #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.footer-right p:hover {
+  color: #4fd1c5;
+}
+
+/* Footer bottom line */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .footer-content-row {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left-content,
+  .footer-right {
+    align-items: center;
+    max-width: 100%;
+  }
 }
