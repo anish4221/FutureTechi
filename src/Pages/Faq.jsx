@@ -1,6 +1,6 @@
 import React from 'react';
 import FaqContent from './FaqContent';
-import './faq.css';
+import './Faq.css';
 import bgvideo from '../assets/futurevideo.mp4'
 
 const FaqPage = () => {
