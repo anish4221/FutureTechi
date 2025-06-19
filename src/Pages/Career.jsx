@@ -30,7 +30,7 @@ const Career = () => {
                         }
 
                         try {
-                            const response = await fetch("http://https://emailbackend-p7sd.onrender.com:5000/api/form/submit", {
+                            const response = await fetch("https://emailbackend-p7sd.onrender.com/api/form/submit", {
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json",
